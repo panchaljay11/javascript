@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <title>Simple Interest</title>
+</head>
+
+<body class="bg-gray-300">
+
+<script>
+     function subjects(){
+          
+          let eng=parseInt(document.getElementById("eng").value);
+          let hindi=parseInt(document.getElementById("hindi").value);
+          let maths=parseInt(document.getElementById("maths").value);
+          let total=eng+hindi+maths;
+          
+          document.getElementById("spanans").innerHTML=total;
+
+          if(total>80){
+               document.getElementById("spangrade").innerHTML="A Grade";
+          }
+          else if(total>40){
+               document.getElementById("spangrade").innerHTML="B Grade";
+          }
+          else if(total>30){
+               document.getElementById("spangrade").innerHTML="C Grade";
+     }
+     else{
+          document.getElementById("spangrade").innerHTML="You are fail";
+     }
+}
+</script>
+
+
+     <div class="container mt-24 flex mx-auto items-center justify-center">
+          <div class="left w-1/3  mr-24 mb-20 -mx-96  ">
+              
+          </div>
+
+          <div class="right flex flex-col bg-black p-8  rounded-xl w-[22rem] px-3 h-[18rem]  shadow-md shadow-gray-500 relative ">
+               <input class="px-3 h-12 my-2 -mt-5  border-2 border-gray-200  rounded-md outline-blue-400" type="text"
+                    placeholder="Enter English Marks" id="eng">
+          
+               <input class="px-3 h-12 my-2 border-2 border-gray-200 rounded-md outline-blue-400" type="text"
+                    placeholder="Enter Hindi Marks" id="hindi">
+
+                <input class="px-3 h-12 my-2 border-2 border-gray-200 rounded-md outline-blue-400" type="text"
+                placeholder="Enter Maths Marks" id="maths">
+
+               <input  class="bg-green-600 hover:bg-green-700 active:bg-green-800 font-bold text-white p-1 mx-32 rounded-lg mx-8  my-6 mb-0 justify-between"
+                type="button" value="Submit" id="btnsubmit" onclick="subjects();">
+                
+                <span class=""id="spanans"></span>
+
+                <span class=""id="spangrade"></span>   
+               
+          </div>
+     </div>
+</body>
+</html>

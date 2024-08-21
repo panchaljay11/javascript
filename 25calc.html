@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <title>Calculator</title>
+</head>
+
+<body class="bg-gray-500">
+
+<script>
+     function add(){
+          let a=parseInt(document.getElementById("txtno1").value);
+          let b=parseInt(document.getElementById("txtno2").value);
+
+           document.getElementById("spanans").innerHTML=a+b;        
+     }
+     function sub(){
+          let a=parseInt(document.getElementById("txtno1").value);
+          let b=parseInt(document.getElementById("txtno2").value);
+
+           document.getElementById("spanans").innerHTML=a-b;        
+     }
+     function mult(){
+          let a=parseInt(document.getElementById("txtno1").value);
+          let b=parseInt(document.getElementById("txtno2").value);
+
+           document.getElementById("spanans").innerHTML=a*b;        
+     }   
+     function div(){
+          let a=parseInt(document.getElementById("txtno1").value);
+          let b=parseInt(document.getElementById("txtno2").value);
+
+           document.getElementById("spanans").innerHTML=a/b;        
+     }
+</script>
+
+
+     <div class="container mt-24 flex mx-auto items-center justify-center">
+          <div class="left w-1/3  mr-24 mb-20 -mx-96  ">
+              
+          </div>
+
+          <div class="right flex flex-col bg-white p-8  rounded-xl w-[22rem] px-3 h-[20rem]  shadow-md shadow-gray-500 relative">
+               <input class="px-3 h-12 my-2 -mt-5  border-2 border-gray-200  rounded-md outline-blue-400" type="text"
+                    placeholder="Enter Number 1" id="txtno1">
+          
+               <input class="px-3 h-12 my-2 border-2 border-gray-200 rounded-md outline-blue-400" type="text"
+                    placeholder="Enter Number 2" id="txtno2">
+
+               <input  class="bg-green-600 hover:bg-green-700 active:bg-green-800 font-bold text-white p-1 mx-32 rounded-lg  my-6 mb-0 justify-between"
+                type="button" value="addition" id="btnsubmit" onclick="add();">
+
+                <input  class="bg-green-600 hover:bg-green-700 active:bg-green-800 font-bold text-white p-1 mx-32 rounded-lg  my-6 mb-0 flex"
+                type="button" value="btnsubmit" id="nclick="sub();">
+
+                <input  class="bg-green-600 hover:bg-green-700 active:bg-green-800 font-bold text-white p-1 mx-32 rounded-lg  my-6 mb-0 flex"
+                type="button" value="mult" id="btnsubmit" onclick="mult();">
+
+                <input  class="bg-green-600 hover:bg-green-700 active:bg-green-800 font-bold text-white p-1 mx-32 rounded-lg  my-6 mb-0 flex"
+                type="button" value="div" id="btnsubmit" onclick="div();">
+               
+               <span class="text-2xl absolute -bottom-10 mx-4 text-white" id="spanans">                  
+                </span>     
+               
+          </div>
+        
+     </div>
+</body>
+
+</html>

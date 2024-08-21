@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <title>Odd & Even</title>
+</head>
+
+<body class="bg-gray-700 flex items-center justify-center min-h-screen">
+
+<script>
+
+     function table(){
+          
+     let n = parseInt(document.getElementById("number").value);
+     let a = "";
+     let b = "";
+
+     for(let i = 1; i <= n; i++){
+
+     if(i % 2 == 0){
+          a += "<br>" + i + "is Even";
+     }
+      else{
+         b += "<br>" + i + "is Odd";
+     }
+
+     }
+     document.getElementById("ans").innerHTML = a;
+     document.getElementById("ans2").innerHTML = b;
+     
+}
+</script>
+
+     <div class="container flex items-center justify-center">
+          <div class="flex flex-col bg-black p-8 rounded-xl w-80 shadow-md shadow-gray-500">
+               <input class="px-3 h-10 mb-5 border-2 border-gray-200 rounded-md outline-blue-400" type="text"
+                    placeholder="Enter Number" id="number">
+          
+               <input class="bg-green-600 hover:bg-green-700 active:bg-green-800 font-bold text-white p-2 rounded-lg my-4"
+                type="button" value="Submit" id="btnsubmit" onclick="table();">
+
+                <div class="text-xl text-white" id="ans"></div>
+                
+                <div class="text-xl text-white" id="ans2"></div>
+                
+          </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <title>Squre & Cube</title>
+</head>
+
+<body class="bg-gray-700 flex items-center justify-center min-h-screen">
+
+<script>
+
+     function squre(){
+          
+          let n=parseInt(document.getElementById("number").value);
+     
+          document.getElementById("ans").innerHTML=n*n;
+          
+     }
+     function cube(){
+          
+          let n=parseInt(document.getElementById("number").value);
+         
+          document.getElementById("ans").innerHTML=n*n*n;
+          
+     }
+
+</script>
+
+     <div class="container flex items-center justify-center">
+          <div class="flex flex-col bg-black p-8 rounded-xl w-80 shadow-md shadow-gray-500">
+
+               <input class="px-3 h-10 mb-5 border-2 border-gray-200 rounded-md outline-blue-400" type="text" placeholder="Enter Number" id="number">
+          
+                <label class="text-white">Squre :
+                     <input   type="radio"  name="n"  onclick="squre();">
+
+               </label>
+ 
+               <label class="text-white">Cube :
+                    <input type="radio" name="n"  onclick="cube();">
+               </label>
+          
+          <span class="text-xl text-white" id="ans"></span>
+                
+                
+                
+          </div>
+     </div>
+</body>
+</html>
